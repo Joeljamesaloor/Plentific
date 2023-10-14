@@ -4,17 +4,28 @@ import Screens.CalculatorPage;
 import driver.AppiumDriverSetup;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.junit.BeforeClass;
+import appium.AppiumServer;
+
 
 public class CalculatorStepDefinitions {
+
 
     private AppiumDriver<MobileElement> driver;
     private CalculatorPage calculatorPage;
     private String operation;
     private int num1, num2;
+
+
+
+
+
 
     @Given("I launch the calculator app")
     public void i_launch_the_calculator_app() {
@@ -90,5 +101,6 @@ public class CalculatorStepDefinitions {
         Assert.assertEquals(expectedDisplay, calculatorPage.getDisplayText());
         calculatorPage.clickACButton();
     }
+
 
 }
