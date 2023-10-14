@@ -14,14 +14,15 @@ import java.net.URL;
 public class AppiumDriverSetup {
     private static AppiumDriver<MobileElement> driver;
 
-    public static AppiumDriver getDriver() {
+    public static AppiumDriver<MobileElement> getDriver() {
+
         if (driver == null) {
             try {
                 DesiredCapabilities caps = new DesiredCapabilities();
                 caps.setCapability("deviceName", "emulator");
                 caps.setCapability("platformName", "Android");
                 caps.setCapability("automationName", "UiAutomator2");
-                caps.setCapability("app", "/Users/joeljamesaloor/AndroidStudioProjects/October Project2/build/app/outputs/apk/release/app-release.apk");
+                caps.setCapability("app", "src/main/apk/app-release.apk");
                 caps.setCapability("appPackage", "felipecastrosales.calculator");
                 caps.setCapability("appActivity", "felipecastrosales.calculator.MainActivity");
                 caps.setCapability("appWaitActivity", "felipecastrosales.calculator.SplashActivity,felipecastrosales.calculator.MainActivity");
