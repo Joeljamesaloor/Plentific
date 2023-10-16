@@ -120,7 +120,7 @@ public class CalculatorPage {
     public String getDisplayText() {
         MobileElement displayElement = driver.findElement(resultView);
         if (waitHelper.waitForElementToDisplay(displayElement)) {
-            return displayElement.getAttribute("content-desc"); // Assuming the displayed text is stored in the content-desc attribute.
+            return displayElement.getAttribute("content-desc");
         }
         return null;
     }

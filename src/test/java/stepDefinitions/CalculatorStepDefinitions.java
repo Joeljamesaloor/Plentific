@@ -4,14 +4,11 @@ import Screens.CalculatorPage;
 import driver.AppiumDriverSetup;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
-import io.cucumber.java.After;
-import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-import org.junit.BeforeClass;
-import appium.AppiumServer;
+
 
 
 public class CalculatorStepDefinitions {
